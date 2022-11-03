@@ -11,7 +11,11 @@
     <div class="container-buttons flex justify-center">
 
         <n-button tertiary class="btn mr-5">About me</n-button>
-        <n-button tertiary class="btn">Projects</n-button>
+          <router-link :to="{name:'projects'}">
+        <n-button tertiary class="btn"> 
+          Projects
+        </n-button>
+            </router-link> 
     </div>
 </div>
 
