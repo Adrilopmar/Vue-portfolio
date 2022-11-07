@@ -1,24 +1,47 @@
 [
   {
-    "procrastinant": {
       "name": {
         "full_name": "Procrastinan't",
         "url_name": "procrastinant"
       },
-      "description": "",
-      "backlog": {},
+      "description": "Procrastinan't is a to-do app where you can post, edit, delete, mark as done and archive your daily tasks. Thanks to the authentication you are the only one who can create, read and edit your to do tasks. // It was the final project of Iron Hack bootcamp in order to create a C.R.U.D. application and learn to connect front-end with back-end. // I really enjoyed coding Procrastinan't due to several reasons. The challenges and its headaches I faced during the development were the main reason that made me keep working hard. Another reason was the environment we had in class during the project development time. Helping out classmates was gratifying although some times meant not working on my own project as much as I would have liked. Even if I had not worked as much hours as I would liked I may say that all objectives and aims were greatly accomplished. ",
+      "backlog":[ 
+        {
+          "title":"Profile section",
+          "description":""
+        },
+        {
+          "title":"Drag & Drop",
+          "description":""
+        },
+        {
+          "title":"Check boxes task",
+          "description":""
+        },
+        {
+          "title":"Task details",
+          "description":""
+        }
+      ]
+      ,
       "big_mistake": {},
-      "technologies": []
-    },
-    "poke_api": {
+      "technologies": [],
+      "images":{
+        "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830633/vue%20portfolio/projects/procrastinant/cover-procrastinant_j42kmv.png"
+      }
+  },
+    {
       "name": {
         "full_name": "Poket Monsters",
-        "url_name": "pokemonsters"
+        "url_name": "poke_api"
       },
-      "description": "",
+      "description": "sdrfgfgfdgg // gdfsg",
       "backlog": {},
       "big_mistake": {},
-      "technologies": []
-    }
+      "technologies": [],
+      "images":{
+        "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830238/vue%20portfolio/projects/poket%20monsters/cover-poket-monsters_onkz44.png"
+      }
+    
   }
 ]
