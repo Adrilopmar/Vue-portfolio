@@ -20,9 +20,7 @@
           :options="menuOptions"
         />
       </n-layout-sider>
-      <n-layout>
-        <router-view></router-view>
-      </n-layout>
+      <router-view></router-view>
     </n-layout>
   </n-space>
 </aside>
@@ -37,9 +35,10 @@ import {
   PersonOutline as PersonIcon,
   WineOutline as WineIcon
 } from '@vicons/ionicons5';
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
 import infoProjects from '../assets/infoProjects.json'
 import { keyBy } from 'lodash';
+
 
 function renderIcon (icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
@@ -47,34 +46,43 @@ function renderIcon (icon: Component) {
 const activeKey= ref<string | null>(null);
 const collapsed= ref<boolean>(false)
 const projectName= <string> 'procrastinant'
-const [info_projects] = infoProjects
+const [procrastinant, poke_api] = infoProjects
+const router = useRouter()
 
 const menuOptions: MenuOption[] = [
   {
     label: ()=> h(RouterLink,{to:
       {
         name:`singleProject`,
-        params:{projectName:info_projects.procrastinant.name.url_name}
+        params:{projectName:procrastinant.name.url_name}
       }},
-      {default:()=>info_projects.procrastinant.name.full_name}),
+      {default:()=>procrastinant.name.full_name}),
     key: 'procrastinant',
     icon: renderIcon(BookIcon),
     children:[
     {
-        label:'Explanation',
-        key:'explanation'
+        label: () =>h('button',{
+        onclick: ()=>{ 
+          router.push({path:"/projects/procrastinant"})
+          setTimeout(()=> {document.getElementById('projectExplanation')?.scrollIntoView({behavior:'smooth'})},100)}
+      },'Explanation'),
+        key:'explanation_procrast'
       },
       {
-        label:'Backlog',
-        key:'backlog'
+        label: () =>h('button',{
+        onclick: ()=>{ 
+          router.push({path:"/projects/procrastinant"})
+          setTimeout(()=> {document.getElementById('projectExplanation')?.scrollIntoView({behavior:'smooth'})},100)}
+      },'Backlog'),
+        key:'backlog_procrast'
       },
       {
         label:'Big mistakes',
-        key:'big_mistakes'
+        key:'big_mistakes_procrast'
       },
       {
         label:'Technologies',
-        key:'technologies'
+        key:'technologies_procrast'
       },
 
 
@@ -84,27 +92,31 @@ const menuOptions: MenuOption[] = [
     label: ()=> h(RouterLink,{to:
       {
         name:`singleProject`,
-        params:{projectName:info_projects.poke_api.name.url_name}
+        params:{projectName:poke_api.name.url_name}
       }},
-      {default:()=>info_projects.poke_api.name.full_name}),
+      {default:()=>poke_api.name.full_name}),
     key: 'pokeapi',
     icon: renderIcon(BookIcon),
     children:[
     {
-        label:'Explanation',
-        key:'explanation'
+      label: () =>h('button',{
+        onclick: ()=>{ 
+          router.push({path:"/projects/poke_api"})
+          setTimeout(()=> {document.getElementById('projectExplanation')?.scrollIntoView({behavior:'smooth'})},100)}
+      },'Explanation'),
+        key:'explanation_poke'
       },
       {
         label:'Backlog',
-        key:'backlog'
+        key:'backlog_poke'
       },
       {
         label:'Big mistakes',
-        key:'big_mistakes'
+        key:'big_mistakes_poke'
       },
       {
         label:'Technologies',
-        key:'technologies'
+        key:'technologies_poke'
       },
 
 
@@ -178,7 +190,6 @@ const menuOptions: MenuOption[] = [
     ]
   }
 ]
-
 </script>
 
 <style scoped>
