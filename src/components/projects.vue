@@ -18,7 +18,6 @@
           :collapsed-width="64"
           :collapsed-icon-size="22"
           :options="menuOptions"
-          :to="{name:'procrastinant'}"
         />
       </n-layout-sider>
       <n-layout>
@@ -31,7 +30,7 @@
 
 <script setup lang="ts">
 import { defineComponent, h, ref, Component } from 'vue'
-import { NIcon, NMenu, NSwitch, NLayoutSider, NLayout } from 'naive-ui'
+import { NIcon, NMenu, NSwitch, NLayoutSider, NLayout,NSpace } from 'naive-ui'
 import type { MenuOption } from 'naive-ui'
 import {
   BookOutline as BookIcon,
@@ -39,6 +38,8 @@ import {
   WineOutline as WineIcon
 } from '@vicons/ionicons5';
 import { RouterLink } from 'vue-router';
+import infoProjects from '../assets/infoProjects.json'
+import { keyBy } from 'lodash';
 
 function renderIcon (icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
@@ -46,25 +47,81 @@ function renderIcon (icon: Component) {
 const activeKey= ref<string | null>(null);
 const collapsed= ref<boolean>(false)
 const projectName= <string> 'procrastinant'
+const [info_projects] = infoProjects
 
 const menuOptions: MenuOption[] = [
   {
-    label: ()=> h(RouterLink,{to:{name:`singleProject`}},{default:()=>'Procrastinant'}),
-    key: 'hear-the-wind-sing',
-    icon: renderIcon(BookIcon),
-  },
-  {
-    label: ()=> h(RouterLink,{to:{name:'singleProject'}},{default:()=>'procrastinant'}),
-    key: 'pinball-1973',
-    icon: renderIcon(BookIcon),
-    disabled: false,
-    children: [
+    label: ()=> h(RouterLink,{to:
       {
-        label: 'Rat',
-        key: 'rat'
-      }
+        name:`singleProject`,
+        params:{projectName:info_projects.procrastinant.name.url_name}
+      }},
+      {default:()=>info_projects.procrastinant.name.full_name}),
+    key: 'procrastinant',
+    icon: renderIcon(BookIcon),
+    children:[
+    {
+        label:'Explanation',
+        key:'explanation'
+      },
+      {
+        label:'Backlog',
+        key:'backlog'
+      },
+      {
+        label:'Big mistakes',
+        key:'big_mistakes'
+      },
+      {
+        label:'Technologies',
+        key:'technologies'
+      },
+
+
     ]
   },
+  {
+    label: ()=> h(RouterLink,{to:
+      {
+        name:`singleProject`,
+        params:{projectName:info_projects.poke_api.name.url_name}
+      }},
+      {default:()=>info_projects.poke_api.name.full_name}),
+    key: 'pokeapi',
+    icon: renderIcon(BookIcon),
+    children:[
+    {
+        label:'Explanation',
+        key:'explanation'
+      },
+      {
+        label:'Backlog',
+        key:'backlog'
+      },
+      {
+        label:'Big mistakes',
+        key:'big_mistakes'
+      },
+      {
+        label:'Technologies',
+        key:'technologies'
+      },
+
+
+    ]
+  },
+  // {
+  //   label: ()=> h(RouterLink,{to:{name:'singleProject'}},{default:()=>'procrastinant'}),
+  //   key: 'pinball-1973',
+  //   icon: renderIcon(BookIcon),
+  //   disabled: false,
+  //   children: [
+  //     {
+  //       label: 'Rat',
+  //       key: 'rat'
+  //     }
+  //   ]
+  // },
   {
     label: 'A Wild Sheep Chase',
     key: 'a-wild-sheep-chase',
@@ -121,19 +178,6 @@ const menuOptions: MenuOption[] = [
     ]
   }
 ]
-
-
-// export default defineComponent({
-//   setup () {
-//     return {
-//       activeKey: ref<string | null>(null),
-//       collapsed: ref(true),
-//       menuOptions
-//     }
-//   }
-// })
-
-
 
 </script>
 
