@@ -8,19 +8,19 @@
       "backlog":[ 
         {
           "title":"Profile section",
-          "description":""
+          "description":"Improving the profile section. As it was a little project I just coded the main idea of what could be the profile section. There are still a lot of work to do like let users customize the whole profile: Upload photo, change name, change description... "
         },
         {
           "title":"Drag & Drop",
-          "description":""
+          "description":"I really would like to implement a drag and drop system to order the tasks as pleased."
         },
         {
           "title":"Check boxes task",
-          "description":""
+          "description":"Would be really great to implement a type of task with checkboxes in case the user would like to cross just a part of the task."
         },
         {
           "title":"Task details",
-          "description":""
+          "description":"I thought of it at the beggining of the project but under my point of views was not a priority so there were a lot of work to do. So nowadays it is something that would be great to do. Implementing the date and time of the task creation and its a deadline."
         }
       ]
       ,
@@ -36,7 +36,24 @@
         "url_name": "poke_api"
       },
       "description": "sdrfgfgfdgg // gdfsg",
-      "backlog": {},
+      "backlog":[ 
+        {
+          "title":"Profile section",
+          "description":"Improving the profile section. As it was a little project I just coded the main idea of what could be the profile section. There are still a lot of work to do like let users customize the whole profile: Upload photo, change name, change description... "
+        },
+        {
+          "title":"Drag & Drop",
+          "description":"I really would like to implement a drag and drop system to order the tasks as pleased."
+        },
+        {
+          "title":"Check boxes task",
+          "description":"Would be really great to implement a type of task with checkboxes in case the user would like to cross just a part of the task."
+        },
+        {
+          "title":"Task details",
+          "description":"I thought of it at the beggining of the project but under my point of views was not a priority so there were a lot of work to do. So nowadays it is something that would be great to do. Implementing the date and time of the task creation and its a deadline."
+        }
+      ],
       "big_mistake": {},
       "technologies": [],
       "images":{
