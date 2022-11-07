@@ -7,8 +7,18 @@
     </div>
 </article>
 <article id="projectExplanation">
-    <h3 class="text-4xl underline">Explanation</h3>
+    <h3 class="text-4xl underline">About the project</h3>
     <div id="projectDescription" class="project-description mt-9"></div>
+</article>
+<article id="projectBacklog">
+    <h3 class="text-4xl underline">How would I keep working ?</h3>
+    <div id="projectPendings" class="project-description mt-9">
+        <div v-for="pending in fullProjectInfo.backlog">
+            <ul class="mt-5"><b class="text-2xl">{{pending.title}}</b>
+            <li class="mt-3">{{pending.description}}</li>
+            </ul>
+        </div>
+    </div>
 </article>
 </section>
 </template>
@@ -23,10 +33,12 @@ const route = useRoute()
 const fullProjectInfo = ref(infoProjects.find(el=>el.name.url_name == route.params.projectName ))
 
 const getProjectInfo = ()=>{
-    let data = ''
+    let dataDescription = ''
+    let dataBacklog = ''
     fullProjectInfo.value = infoProjects.find(el=>el.name.url_name == route.params.projectName )
-    fullProjectInfo.value?.description.split('//').forEach(el=> data += `<p class="mt-3">${el}</p>`);
-    document.querySelector('#projectDescription').innerHTML = data
+    fullProjectInfo.value?.description.split('//').forEach(el=> dataDescription += `<p class="mt-3">${el}</p>`);
+    fullProjectInfo.value?.backlog.forEach(el=> console.log(el.title))
+    document.querySelector('#projectDescription').innerHTML = dataDescription
 }
 
 onMounted(()=>{
