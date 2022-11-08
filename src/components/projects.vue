@@ -1,7 +1,7 @@
 <template>
   <aside>
     <n-space vertical>
-      <n-layout has-sider>
+      <n-layout has-sider >
         <n-layout-sider
           bordered
           collapse-mode="width"
@@ -20,7 +20,9 @@
             :options="menuOptions"
           />
         </n-layout-sider>
-        <router-view></router-view>
+        <div class="content-single-projects">
+          <router-view></router-view>
+        </div>
       </n-layout>
     </n-space>
   </aside>
@@ -48,14 +50,18 @@ const router = useRouter();
 
 const menuOptions: MenuOption[] = [
   {
-    label: () =>
+    label: () => 
       h(
-        RouterLink,
+        'button',
         {
-          to: {
-            name: `singleProject`,
-            params: { projectName: procrastinant.name.url_name },
-          },
+          onclick:()=>{
+            router.push({path:"/projects/procrastinant"});
+            setTimeout(()=>{
+              document
+                    .getElementById("projectTitle")
+                    ?.scrollIntoView({ behavior: "smooth" });
+            },100)
+          }
         },
         { default: () => procrastinant.name.full_name }
       ),
@@ -73,7 +79,7 @@ const menuOptions: MenuOption[] = [
                   document
                     .getElementById("projectExplanation")
                     ?.scrollIntoView({ behavior: "smooth" });
-                }, 200);
+                }, 100);
               },
             },
             "Explanation"
@@ -89,9 +95,9 @@ const menuOptions: MenuOption[] = [
                 router.push({ path: "/projects/procrastinant" });
                 setTimeout(() => {
                   document
-                    .getElementById("projectExplanation")
+                    .getElementById("projectBacklog")
                     ?.scrollIntoView({ behavior: "smooth" });
-                }, 200);
+                }, 100);
               },
             },
             "Backlog"
@@ -111,12 +117,16 @@ const menuOptions: MenuOption[] = [
   {
     label: () =>
       h(
-        RouterLink,
+        'button',
         {
-          to: {
-            name: `singleProject`,
-            params: { projectName: poke_api.name.url_name },
-          },
+          onclick:()=>{
+            router.push({path:"/projects/poke_api"});
+            setTimeout(()=>{
+              document
+                    .getElementById("projectTitle")
+                    ?.scrollIntoView({ behavior: "smooth" });
+            },100)
+          }
         },
         { default: () => poke_api.name.full_name }
       ),
@@ -142,7 +152,21 @@ const menuOptions: MenuOption[] = [
         key: "explanation_poke",
       },
       {
-        label: "Backlog",
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => {
+                router.push({ path: "/projects/poke_api" });
+                setTimeout(() => {
+                  document
+                    .getElementById("projectBacklog")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              },
+            },
+            "Backlog"
+          ),
         key: "backlog_poke",
       },
       {
@@ -226,7 +250,8 @@ const menuOptions: MenuOption[] = [
 </script>
 
 <style scoped>
-aside {
-  height: calc(100vh - 65px);
+.content-single-projects{
+  overflow-y:scroll;
+  height: calc(100vh - 65px); 
 }
 </style>

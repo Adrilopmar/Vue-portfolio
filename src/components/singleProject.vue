@@ -1,5 +1,5 @@
 <template>
-<section class="mx-9">
+<section class="mx-9" id="projectTitle">
 <h1 class="text-6xl mt-9 underline">{{fullProjectInfo?.name.full_name}}</h1>
 <article>
     <div class="w-full ">
@@ -15,7 +15,7 @@
     <div id="projectPendings" class="project-description mt-9">
         <div v-for="pending in fullProjectInfo.backlog">
             <ul class="mt-5"><b class="text-2xl">{{pending.title}}</b>
-            <li class="mt-3">{{pending.description}}</li>
+            <li class="mt-3 text-xl">{{pending.description}}</li>
             </ul>
         </div>
     </div>
@@ -25,8 +25,8 @@
     <div class="flex flex-wrap justify-between mt-9">
         <div v-for="tech in fullProjectInfo?.technologies" class="mx-3">
             <ul>
-                <li class="text-center mb-5">{{tech.name}}</li>
-                <img class="mb-9" :src="tech.logo" alt="">
+                <li class="text-center mb-5 text-xl">{{tech.name}}</li>
+                <img class="mb-9 logo" :src="tech.logo" alt="">
             </ul>
         </div>
     </div>
@@ -72,7 +72,9 @@ margin-top: 100px;
 #projectTechnologies img{
     height: 100px;
 }
-
+.logo{
+    filter: drop-shadow(5px 5px 2px rgb(163, 163, 163));
+}
 
 
 </style>
