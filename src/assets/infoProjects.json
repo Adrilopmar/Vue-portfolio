@@ -25,7 +25,44 @@
       ]
       ,
       "big_mistake": {},
-      "technologies": [],
+      "technologies": [
+        {
+          "name":"Vue",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916397/vue%20portfolio/technologies/vue_mzxjre.png"
+        },
+        {
+          "name":"Vite",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916397/vue%20portfolio/technologies/vite_r8wnjf.png"
+        },
+        {
+          "name":"Pinia",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916397/vue%20portfolio/technologies/pinia_hd7nsn.png"
+        },
+        {
+          "name":"JavaScript",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916398/vue%20portfolio/technologies/JavaScript-logo_osius3.png"
+        },
+        {
+          "name":"CSS",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916398/vue%20portfolio/technologies/css_xcjpia.png"
+        },
+        {
+          "name":"HTML5",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916398/vue%20portfolio/technologies/html5_k9flxd.png"
+        },
+        {
+          "name":"Tailwind",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667917977/vue%20portfolio/technologies/tailwind_nbomhd.png"
+        },
+        {
+          "name":"Supabase",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916397/vue%20portfolio/technologies/supabase_exypmb.png"
+        },
+        {
+          "name":"Vercel",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667917833/vue%20portfolio/technologies/vercel_wgb3bp.png"
+        }
+      ],
       "images":{
         "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830633/vue%20portfolio/projects/procrastinant/cover-procrastinant_j42kmv.png"
       }
@@ -55,7 +92,33 @@
         }
       ],
       "big_mistake": {},
-      "technologies": [],
+      "technologies": [
+        {
+          "name":"Vue",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916397/vue%20portfolio/technologies/vue_mzxjre.png"
+        },
+        {
+          "name":"Vite",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916397/vue%20portfolio/technologies/vite_r8wnjf.png"
+        },
+        {
+          "name":"JavaScript",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916398/vue%20portfolio/technologies/JavaScript-logo_osius3.png"
+        },
+        {
+          "name":"CSS",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916398/vue%20portfolio/technologies/css_xcjpia.png"
+        },
+        {
+          "name":"HTML5",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916398/vue%20portfolio/technologies/html5_k9flxd.png"
+        },
+        {
+          "name":"Bulma",
+          "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916633/vue%20portfolio/technologies/bulma_eey3z3.png"
+        }
+    ],
+
       "images":{
         "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830238/vue%20portfolio/projects/poket%20monsters/cover-poket-monsters_onkz44.png"
       }
