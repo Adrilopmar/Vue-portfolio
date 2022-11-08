@@ -69,26 +69,22 @@
   },
     {
       "name": {
-        "full_name": "Poket Monsters",
+        "full_name": "Pocket Monsters",
         "url_name": "poke_api"
       },
-      "description": "sdrfgfgfdgg // gdfsg",
+      "description": "Pocket Monsters is project made by little challenges. The challenge was to create this little project in 60 min approximately. So every 10 min there was a task you had to do. The best part of this challenges was that I showed myself that I was capable of coding something like Pocket Monsters in a bot more than 1 hour. // It was interesting to split a project into tiny challenges and get 10 min per each and work as a sprints. // Actually the app it is not like the one I coded during the challenge. The original had neither the modal window nor the pokeball. Those little improvement were made the next week or so just to have my own pokédex Who would not like to have their own pokédex? Yes, I like Pokémon.",
       "backlog":[ 
         {
-          "title":"Profile section",
-          "description":"Improving the profile section. As it was a little project I just coded the main idea of what could be the profile section. There are still a lot of work to do like let users customize the whole profile: Upload photo, change name, change description... "
+          "title":"Pokémon details",
+          "description":"There is a lot of information about the Pokémons that my app is missing so I would implement a way to display all that information."
         },
         {
-          "title":"Drag & Drop",
-          "description":"I really would like to implement a drag and drop system to order the tasks as pleased."
+          "title":"Navigation through Pokédex",
+          "description":"Nowadays the only way you can check a Pokémon out is to click on it. Would be nice to navigate to next or previous Pokémon once the Pokédex is opened."
         },
         {
-          "title":"Check boxes task",
-          "description":"Would be really great to implement a type of task with checkboxes in case the user would like to cross just a part of the task."
-        },
-        {
-          "title":"Task details",
-          "description":"I thought of it at the beggining of the project but under my point of views was not a priority so there were a lot of work to do. So nowadays it is something that would be great to do. Implementing the date and time of the task creation and its a deadline."
+          "title":"Styles and structure",
+          "description":"I did not want to change the styles of this project because I want to keep the idea of the challenge. But if I had to keep working on it, I would completely change the styles and the structure of the project."
         }
       ],
       "big_mistake": {},
