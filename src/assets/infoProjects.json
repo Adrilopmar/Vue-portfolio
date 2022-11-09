@@ -65,7 +65,8 @@
       ],
       "images":{
         "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830633/vue%20portfolio/projects/procrastinant/cover-procrastinant_j42kmv.png"
-      }
+      },
+      "website":"https://final-project-ih.vercel.app/auth/login"
   },
     {
       "name": {
@@ -114,10 +115,10 @@
           "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916633/vue%20portfolio/technologies/bulma_eey3z3.png"
         }
     ],
-
       "images":{
         "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830238/vue%20portfolio/projects/poket%20monsters/cover-poket-monsters_onkz44.png"
-      }
+      },
+      "website":"https://adrilopmar.github.io/poke-API/"
     
   }
 ]

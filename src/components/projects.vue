@@ -1,7 +1,7 @@
 <template>
   <aside>
     <n-space vertical>
-      <n-layout has-sider >
+      <n-layout has-sider>
         <n-layout-sider
           bordered
           collapse-mode="width"
@@ -21,6 +21,7 @@
           />
         </n-layout-sider>
         <div class="content-single-projects">
+          <div v-if="route.path == '/projects'">dfghfdghdgfh</div>
           <router-view></router-view>
         </div>
       </n-layout>
@@ -32,12 +33,17 @@
 import { h, ref, Component } from "vue";
 import { NIcon, NMenu, NLayoutSider, NLayout, NSpace } from "naive-ui";
 import type { MenuOption } from "naive-ui";
+// TODO: delete if not used
 import {
   BookOutline as BookIcon,
   PersonOutline as PersonIcon,
   WineOutline as WineIcon,
 } from "@vicons/ionicons5";
-import { RouterLink, useRouter } from "vue-router";
+import {
+  Pokeball as Pokeball,
+  Clock as Clock
+} from '@vicons/tabler'
+import { RouterLink, useRouter, useRoute } from "vue-router";
 import infoProjects from "../assets/infoProjects.json";
 
 function renderIcon(icon: Component) {
@@ -47,40 +53,37 @@ const activeKey = ref<string | null>(null);
 const collapsed = ref<boolean>(false);
 const [procrastinant, poke_api] = infoProjects;
 const router = useRouter();
+const route = useRoute();
+
+// function to redirect to project and section side menu
+const projectRedirect = (path: string, section: string) => {
+  router.push({ path: `/projects/${path}` });
+  setTimeout(() => {
+    document
+      .getElementById(`project${section}`)
+      ?.scrollIntoView({ behavior: "smooth" });
+  }, 100);
+};
 
 const menuOptions: MenuOption[] = [
   {
-    label: () => 
+    label: () =>
       h(
-        'button',
+        "button",
         {
-          onclick:()=>{
-            router.push({path:"/projects/procrastinant"});
-            setTimeout(()=>{
-              document
-                    .getElementById("projectTitle")
-                    ?.scrollIntoView({ behavior: "smooth" });
-            },100)
-          }
+          onclick: () => projectRedirect("procrastinant", "Title"), // path & section
         },
         { default: () => procrastinant.name.full_name }
       ),
     key: "procrastinant",
-    icon: renderIcon(BookIcon),
+    icon: renderIcon(Clock),
     children: [
       {
         label: () =>
           h(
             "button",
             {
-              onclick: () => {
-                router.push({ path: "/projects/procrastinant" });
-                setTimeout(() => {
-                  document
-                    .getElementById("projectExplanation")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }, 100);
-              },
+              onclick: () => projectRedirect("procrastinant", "Explanation"), // path & section
             },
             "Explanation"
           ),
@@ -91,14 +94,7 @@ const menuOptions: MenuOption[] = [
           h(
             "button",
             {
-              onclick: () => {
-                router.push({ path: "/projects/procrastinant" });
-                setTimeout(() => {
-                  document
-                    .getElementById("projectBacklog")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }, 100);
-              },
+              onclick: () => projectRedirect("procrastinant", "Backlog"), // path & section
             },
             "Backlog"
           ),
@@ -109,43 +105,47 @@ const menuOptions: MenuOption[] = [
         key: "big_mistakes_procrast",
       },
       {
-        label: "Technologies",
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => projectRedirect("procrastinant", "Technologies"), // path & section
+            },
+            "Technologies"
+          ),
         key: "technologies_procrast",
+      },
+      {
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => projectRedirect("procrastinant", "Website"), // path & section
+            },
+            "Website"
+          ),
+        key: "website_procrast",
       },
     ],
   },
   {
     label: () =>
       h(
-        'button',
+        "button",
         {
-          onclick:()=>{
-            router.push({path:"/projects/poke_api"});
-            setTimeout(()=>{
-              document
-                    .getElementById("projectTitle")
-                    ?.scrollIntoView({ behavior: "smooth" });
-            },100)
-          }
+          onclick: () => projectRedirect("poke_api", "Title"), // path & section
         },
         { default: () => poke_api.name.full_name }
       ),
     key: "pokeapi",
-    icon: renderIcon(BookIcon),
+    icon: renderIcon(Pokeball),
     children: [
       {
         label: () =>
           h(
             "button",
             {
-              onclick: () => {
-                router.push({ path: "/projects/poke_api" });
-                setTimeout(() => {
-                  document
-                    .getElementById("projectExplanation")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }, 100);
-              },
+              onclick: () => projectRedirect("poke_api", "Explanation"), // path & section
             },
             "Explanation"
           ),
@@ -156,14 +156,7 @@ const menuOptions: MenuOption[] = [
           h(
             "button",
             {
-              onclick: () => {
-                router.push({ path: "/projects/poke_api" });
-                setTimeout(() => {
-                  document
-                    .getElementById("projectBacklog")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }, 100);
-              },
+              onclick: () => projectRedirect("poke_api", "Backlog"), // path & section
             },
             "Backlog"
           ),
@@ -174,23 +167,29 @@ const menuOptions: MenuOption[] = [
         key: "big_mistakes_poke",
       },
       {
-        label: "Technologies",
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => projectRedirect("poke_api", "Technologies"), // path & section
+            },
+            "Technologies"
+          ),
         key: "technologies_poke",
+      },
+      {
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => projectRedirect("poke_api", "Website"), // path & section
+            },
+            "Website"
+          ),
+        key: "website_poke",
       },
     ],
   },
-  // {
-  //   label: ()=> h(RouterLink,{to:{name:'singleProject'}},{default:()=>'procrastinant'}),
-  //   key: 'pinball-1973',
-  //   icon: renderIcon(BookIcon),
-  //   disabled: false,
-  //   children: [
-  //     {
-  //       label: 'Rat',
-  //       key: 'rat'
-  //     }
-  //   ]
-  // },
   {
     label: "A Wild Sheep Chase",
     key: "a-wild-sheep-chase",
@@ -250,8 +249,8 @@ const menuOptions: MenuOption[] = [
 </script>
 
 <style scoped>
-.content-single-projects{
-  overflow-y:scroll;
-  height: calc(100vh - 65px); 
+.content-single-projects {
+  overflow-y: scroll;
+  height: calc(100vh - 65px);
 }
 </style>
