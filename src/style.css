@@ -3,6 +3,7 @@
 @tailwind utilities;
 :root{
     --main-bg: #dddddd;
+    --primary-btn: #caff42
 }
 body{
     background-color: var(--main-bg) ;
