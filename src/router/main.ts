@@ -23,6 +23,12 @@ const routes = [
       //   component: () => import("../components/singleProject.vue"),
       // },
     ],
+    
+  },
+  { 
+    path: "/about", 
+    name: "about", 
+    component: () => import("../views/about.vue") 
   },
 ];
 

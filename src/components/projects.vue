@@ -2,7 +2,7 @@
   <aside>
     <n-space vertical>
       <n-layout has-sider>
-        <n-layout-sider
+        <n-layout-sider 
           bordered
           collapse-mode="width"
           :collapsed-width="64"
@@ -12,7 +12,7 @@
           @collapse="collapsed = true"
           @expand="collapsed = false"
         >
-          <n-menu
+          <n-menu 
             v-model:value="activeKey"
             :collapsed="collapsed"
             :collapsed-width="64"
@@ -41,7 +41,8 @@ import {
 } from "@vicons/ionicons5";
 import {
   Pokeball as Pokeball,
-  Clock as Clock
+  Clock as Clock,
+  BrandSpotify as BrandSpotify
 } from '@vicons/tabler'
 import { RouterLink, useRouter, useRoute } from "vue-router";
 import infoProjects from "../assets/infoProjects.json";
@@ -51,7 +52,7 @@ function renderIcon(icon: Component) {
 }
 const activeKey = ref<string | null>(null);
 const collapsed = ref<boolean>(false);
-const [procrastinant, poke_api] = infoProjects;
+const [procrastinant, poke_api, spoti_api] = infoProjects;
 const router = useRouter();
 const route = useRoute();
 
@@ -66,7 +67,7 @@ const projectRedirect = (path: string, section: string) => {
 };
 
 const menuOptions: MenuOption[] = [
-  {
+  { //procrastinan't menu options
     label: () =>
       h(
         "button",
@@ -128,7 +129,7 @@ const menuOptions: MenuOption[] = [
       },
     ],
   },
-  {
+  { // pocket monsters menu options
     label: () =>
       h(
         "button",
@@ -190,12 +191,69 @@ const menuOptions: MenuOption[] = [
       },
     ],
   },
-  {
-    label: "A Wild Sheep Chase",
-    key: "a-wild-sheep-chase",
-    disabled: true,
-    icon: renderIcon(BookIcon),
+  { // Spoti API menu options
+    label: () =>
+      h(
+        "button",
+        {
+          onclick: () => projectRedirect("spoti_api", "Title"), // path & section
+        },
+        { default: () => spoti_api.name.full_name }
+      ),
+    key: "spotiapi",
+    icon: renderIcon(BrandSpotify),
+    children: [
+      {
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => projectRedirect("spoti_api", "Explanation"), // path & section
+            },
+            "Explanation"
+          ),
+        key: "explanation_spoti",
+      },
+      {
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => projectRedirect("spoti_api", "Backlog"), // path & section
+            },
+            "Backlog"
+          ),
+        key: "backlog_spoti",
+      },
+      {
+        label: "Big mistakes",
+        key: "big_mistakes_spoti",
+      },
+      {
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => projectRedirect("spoti_api", "Technologies"), // path & section
+            },
+            "Technologies"
+          ),
+        key: "technologies_spoti",
+      },
+      {
+        label: () =>
+          h(
+            "button",
+            {
+              onclick: () => projectRedirect("spoti_api", "Website"), // path & section
+            },
+            "Website"
+          ),
+        key: "website_spoti",
+      },
+    ],
   },
+  
   {
     label: "Dance Dance Dance",
     key: "Dance Dance Dance",
@@ -250,7 +308,12 @@ const menuOptions: MenuOption[] = [
 
 <style scoped>
 .content-single-projects {
+  background: rgba(255, 255, 255, 0.61);
+  color: var(--main-text-color);
   overflow-y: scroll;
   height: calc(100vh - 65px);
+}
+aside{
+  background: #f2f2f2;
 }
 </style>

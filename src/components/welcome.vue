@@ -7,7 +7,9 @@
       tomorrow we all built yesterday.
     </p>
     <div class="container-buttons flex justify-center">
-      <n-button tertiary class="btn mr-5">About me</n-button>
+      <router-link :to="{name:'about'}">
+        <n-button tertiary class="btn mr-5">About me</n-button>
+      </router-link>
       <router-link :to="{ name: 'projects' }">
         <n-button tertiary class="btn"> Projects </n-button>
       </router-link>

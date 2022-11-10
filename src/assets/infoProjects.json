@@ -1,5 +1,5 @@
 [
-  {
+  { 
       "name": {
         "full_name": "Procrastinan't",
         "url_name": "procrastinant"
@@ -120,5 +120,54 @@
       },
       "website":"https://adrilopmar.github.io/poke-API/"
     
-  }
+  },
+  {
+    "name": {
+      "full_name": "Spotify API",
+      "url_name": "spoti_api"
+    },
+    "description": "SpotiAPP was built in purpose of learn and get better in Angular, work with API and the self imposed challenge was changing themes. // Fetching data and working with API or dark and light themes is really common in front-end world. So I built this web Application to learn and get used to work with async & await apart of changing themes. // It is always a good idea to implement diferents palettes to your web in order to let the user decide which mode to use. There are a lot of reasons to introduce dark mode. The mains reasons to set up this feature were to learn how dark/light mode work and reduce eye strain. ",
+    "backlog":[ 
+      {
+        "title":"Pokémon details",
+        "description":"There is a lot of information about the Pokémons that my app is missing so I would implement a way to display all that information."
+      },
+      {
+        "title":"Navigation through Pokédex",
+        "description":"Nowadays the only way you can check a Pokémon out is to click on it. Would be nice to navigate to next or previous Pokémon once the Pokédex is opened."
+      },
+      {
+        "title":"Styles and structure",
+        "description":"I did not want to change the styles of this project because I want to keep the idea of the challenge. But if I had to keep working on it, I would completely change the styles and the structure of the project."
+      }
+    ],
+    "big_mistake": {},
+    "technologies": [
+      {
+        "name":"Angular",
+        "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1668095157/vue%20portfolio/technologies/angular_vqr5ek.png"
+      },
+      {
+        "name":"TypeScript",
+        "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1668095297/vue%20portfolio/technologies/typescript_okxmwe.svg"
+      },
+      {
+        "name":"CSS",
+        "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916398/vue%20portfolio/technologies/css_xcjpia.png"
+      },
+      {
+        "name":"HTML5",
+        "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1667916398/vue%20portfolio/technologies/html5_k9flxd.png"
+      },
+      {
+        "name":"Bootstrap",
+        "logo":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1668095461/vue%20portfolio/technologies/bootstrap_gdxtwx.svg"
+      }
+  ],
+    "images":{
+      "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1668095774/vue%20portfolio/projects/spotify%20API/spoti-api-cover_d6ljwq.png"
+    },
+    "website":"https://adrilopmar.github.io/Spotifyapp/"
+  
+}
 ]
