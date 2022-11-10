@@ -1,9 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 :root{
     --main-bg: #dddddd;
-    --primary-btn: #caff42
+    --primary-btn: #c7eeda;
+    --main-text-color:#49708a;
+    --secondary-text-color:#88abc2;
+    --button-green-text:#18a058;
+    --button-green-text-hover:#117741;
+    --primary-btn-hover: #99c7b0;
+
 }
 body{
     background-color: var(--main-bg) ;
