@@ -11,13 +11,13 @@
     <div class="flex justify-around w-4/5">
 
       <li class="mr-6">
-        <a class="text-blue-500 hover:text-blue-800" href="#">Home</a>
+        <RouterLink :to="{name:'home'}" class="text-black hover:text-white">Home</RouterLink>
       </li>
       <li class="mr-6">
-        <a class="text-blue-500 hover:text-blue-800" href="#">Projects</a>
+        <RouterLink :to="{name:'projects'}" class="text-black hover:text-white">Projects</RouterLink>
       </li>
       <li class="mr-6">
-        <a class="text-blue-500 hover:text-blue-800" href="#">About me</a>
+        <RouterLink :to="{name:'about'}" class="text-black hover:text-white">About me</RouterLink>
       </li>
     </div>
     <!-- <li class="mr-6">
@@ -25,11 +25,15 @@
     </li> -->
   </ul>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+</script>
 <style scoped>
 ul {
-  margin-top: 15px;
-box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 20px -20px;
+  background:#f2f2f2;
+  padding: 7.5px 0;
+
 }
 img {
   height: 50px;
