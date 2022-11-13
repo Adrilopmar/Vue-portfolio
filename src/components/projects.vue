@@ -20,8 +20,10 @@
             :options="menuOptions"
           />
         </n-layout-sider>
-        <div class="content-single-projects">
-          <div v-if="route.path == '/projects'">dfghfdghdgfh</div>
+        <div class="content-single-projects w-full">
+          <div class="mx-9 " v-if="route.path == '/projects'">
+            <h3 class="text-6xl mt-9 underline">Our work</h3>
+          </div>
           <router-view></router-view>
         </div>
       </n-layout>
@@ -102,10 +104,6 @@ const menuOptions: MenuOption[] = [
         key: "backlog_procrast",
       },
       {
-        label: "Big mistakes",
-        key: "big_mistakes_procrast",
-      },
-      {
         label: () =>
           h(
             "button",
@@ -162,10 +160,6 @@ const menuOptions: MenuOption[] = [
             "Backlog"
           ),
         key: "backlog_poke",
-      },
-      {
-        label: "Big mistakes",
-        key: "big_mistakes_poke",
       },
       {
         label: () =>
@@ -226,10 +220,6 @@ const menuOptions: MenuOption[] = [
         key: "backlog_spoti",
       },
       {
-        label: "Big mistakes",
-        key: "big_mistakes_spoti",
-      },
-      {
         label: () =>
           h(
             "button",
@@ -253,67 +243,18 @@ const menuOptions: MenuOption[] = [
       },
     ],
   },
-  
-  {
-    label: "Dance Dance Dance",
-    key: "Dance Dance Dance",
-    icon: renderIcon(BookIcon),
-    children: [
-      {
-        type: "group",
-        label: "People",
-        key: "people",
-        children: [
-          {
-            label: "Narrator",
-            key: "narrator",
-            icon: renderIcon(PersonIcon),
-          },
-          {
-            label: "Sheep Man",
-            key: "sheep-man",
-            icon: renderIcon(PersonIcon),
-          },
-        ],
-      },
-      {
-        label: "Beverage",
-        key: "beverage",
-        icon: renderIcon(WineIcon),
-        children: [
-          {
-            label: "Whisky",
-            key: "whisky",
-          },
-        ],
-      },
-      {
-        label: "Food",
-        key: "food",
-        children: [
-          {
-            label: "Sandwich",
-            key: "sandwich",
-          },
-        ],
-      },
-      {
-        label: "The past increases. The future recedes.",
-        key: "the-past-increases-the-future-recedes",
-      },
-    ],
-  },
 ];
 </script>
 
 <style scoped>
 .content-single-projects {
-  background: rgba(255, 255, 255, 0.61);
+  background:var(--secondary-bg);
   color: var(--main-text-color);
   overflow-y: scroll;
   height: calc(100vh - 65px);
 }
-aside{
-  background: #f2f2f2;
+aside{ 
+  background: var(--main-bg);
+ 
 }
 </style>
