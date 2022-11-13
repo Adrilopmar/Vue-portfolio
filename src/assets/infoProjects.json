@@ -121,7 +121,7 @@
   },
   {
     "name": {
-      "full_name": "Spotify API",
+      "full_name": "SpotiApp",
       "url_name": "spoti_api"
     },
     "description": "SpotiAPP was built in purpose of show that we are not working just with Vue, we work with Angular too, work with API and the self imposed challenge was changing themes (who does not want a dark theme ?). // Fetching data and working with API or dark and light themes is really common in front-end world. So we built this web Application to demostrate we can do it. // It is always a good idea to implement diferents palettes to your web in order to let the user decide which mode to use. There are a lot of reasons to introduce dark mode. The mains reasons to set up this feature were to learn how dark/light mode work and reduce eye strain. ",
