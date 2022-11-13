@@ -17,7 +17,7 @@
       <div id="projectDescription" class="project-description mt-9"></div>
     </article>
     <article id="projectBacklog">
-      <h3 class="text-4xl underline">How would I keep working ?</h3>
+      <h3 class="text-4xl underline">How would we keep working ?</h3>
       <div id="projectPendings" class="project-description mt-9">
         <div v-for="pending in fullProjectInfo.backlog">
           <ul class="mt-5">
@@ -45,7 +45,7 @@
         project.
       </p>
       <p class="text-xl mt-5">
-        Do not hesitate to contact me if you would like to know more about the
+        Do not hesitate to contact us if you would like to know more about the
         app or you have found a bug.
       </p>
       <p class="text-xl mt-5">Thank you! Hope you like it</p>
