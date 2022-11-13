@@ -2,7 +2,7 @@
   <aside>
     <n-space vertical>
       <n-layout has-sider>
-        <n-layout-sider 
+        <n-layout-sider
           bordered
           collapse-mode="width"
           :collapsed-width="64"
@@ -12,7 +12,7 @@
           @collapse="collapsed = true"
           @expand="collapsed = false"
         >
-          <n-menu 
+          <n-menu
             v-model:value="activeKey"
             :collapsed="collapsed"
             :collapsed-width="64"
@@ -21,8 +21,17 @@
           />
         </n-layout-sider>
         <div class="content-single-projects w-full">
-          <div class="mx-9 " v-if="route.path == '/projects'">
+          <div class="m-9" v-if="route.path == '/projects'">
             <h3 class="text-6xl mt-9 underline">Our work</h3>
+            <div class="flex flex-wrap justify-between w-full " >
+              <div v-for="project in infoProjects" class="container-project mt-9" :class="`${project.name.url_name}`">
+                  <div class="text-project p-9">
+                    <h4 class="text-3xl text-white font-bold"> 
+                      {{project.name.full_name}}</h4>
+                      <button @click="projectRedirect(project.name.url_name,'Title')" class="link-btn w-full p-3">Read more!</button>
+                    </div>
+              </div>
+            </div>
           </div>
           <router-view></router-view>
         </div>
@@ -44,8 +53,8 @@ import {
 import {
   Pokeball as Pokeball,
   Clock as Clock,
-  BrandSpotify as BrandSpotify
-} from '@vicons/tabler'
+  BrandSpotify as BrandSpotify,
+} from "@vicons/tabler";
 import { RouterLink, useRouter, useRoute } from "vue-router";
 import infoProjects from "../assets/infoProjects.json";
 
@@ -69,7 +78,8 @@ const projectRedirect = (path: string, section: string) => {
 };
 
 const menuOptions: MenuOption[] = [
-  { //procrastinan't menu options
+  {
+    //procrastinan't menu options
     label: () =>
       h(
         "button",
@@ -127,7 +137,8 @@ const menuOptions: MenuOption[] = [
       },
     ],
   },
-  { // pocket monsters menu options
+  {
+    // pocket monsters menu options
     label: () =>
       h(
         "button",
@@ -185,7 +196,8 @@ const menuOptions: MenuOption[] = [
       },
     ],
   },
-  { // Spoti API menu options
+  {
+    // Spoti API menu options
     label: () =>
       h(
         "button",
@@ -248,13 +260,55 @@ const menuOptions: MenuOption[] = [
 
 <style scoped>
 .content-single-projects {
-  background:var(--secondary-bg);
+  background: var(--secondary-bg);
   color: var(--main-text-color);
   overflow-y: scroll;
   height: calc(100vh - 65px);
 }
-aside{ 
+aside {
   background: var(--main-bg);
- 
 }
+.container-project {
+    height: 700px;
+    width: 32%;
+    position: relative;
+    /* border-radius: 7px; */
+}
+.procrastinant{
+  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830633/vue%20portfolio/projects/procrastinant/cover-procrastinant_j42kmv.png)
+    left/cover no-repeat;
+}
+.poke_api{
+  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830238/vue%20portfolio/projects/poket%20monsters/cover-poket-monsters_onkz44.png)
+    center/cover no-repeat;
+}
+.spoti_api{
+  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1668095774/vue%20portfolio/projects/spotify%20API/spoti-api-cover_d6ljwq.png)
+    left/cover no-repeat;
+}
+.text-project{
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+  opacity: 0;
+  /* border-radius: 7px; */
+}.text-project:hover{
+  opacity: 1;
+  transition: 0.5;
+  backdrop-filter: blur(4px);
+  background-color: rgba(48, 48, 48, 0.6);
+}
+.link-btn {
+  background: var(--primary-btn);
+  color: var(--button-green-text);
+}
+.link-btn:hover{
+    background: var(--primary-btn-hover);
+    color: var(--button-green-text-hover);
+    }
+
 </style>
