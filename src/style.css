@@ -4,7 +4,8 @@
 
 
 :root{
-    --main-bg: #dddddd;
+    --main-bg: #ddddddb2;
+    --secondary-bg: #f2f2f2;
     --primary-btn: #c7eeda;
     --main-text-color:#49708a;
     --secondary-text-color:#88abc2;
