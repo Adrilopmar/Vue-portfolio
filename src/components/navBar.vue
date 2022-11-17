@@ -1,15 +1,15 @@
 <template>
-  <ul class="flex justify-around w-full">
+  <ul class="flex w-full">
     <div>
-      <li class="mr-6">
+      <li class="mr-12">
         <RouterLink :to="{name:'home'}">
          <img class=""
           src="https://res.cloudinary.com/djqzi4hgo/image/upload/v1668359304/vue%20portfolio/logo/alm-logo_tzv32d.png"
-          alt=""
+          alt="logo aloma"
         /></RouterLink>
       </li>
     </div>
-    <div class="flex w-3/5 justify-around">
+    <div class="flex w-2/4 justify-around mx-auto">
       <li class="mr-6">
         <RouterLink :to="{name:'home'}" class="text-black hover:text-white desktop-link">Home</RouterLink>
       </li>
@@ -19,8 +19,8 @@
       <li class="mr-6">
         <RouterLink :to="{name:'about'}" class="text-black hover:text-white desktop-link">About us</RouterLink>
       </li>
-      <li>
-        <n-icon class="my-auto mr-6" @click="activate('left')"><Menu2 class="text-2xl burger-menu hidden cursor-pointer hover:text-white"/></n-icon>
+      <li class="burger-menu">
+        <n-icon class="my-auto mr-6" @click="activate('left')"><Menu2 class="text-2xl cursor-pointer hover:text-white"/></n-icon>
       </li>
     </div>
     
@@ -57,18 +57,21 @@ window.addEventListener('resize', handleResize)
 </script>
 <style scoped>
 ul {
-  padding: 7.5px 0;
+  padding: 7.5px 15px;
 
 }
 img {
   height: 50px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 li {
   align-self: center;
 }
 .prova{
   background-color: var(--secondary-bg);
+}
+.burger-menu{
+  display: none;
 }
 @media (max-width: 580px){
   .desktop-link{
