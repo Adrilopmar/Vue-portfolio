@@ -10,7 +10,7 @@ const routes = [
   {
     path: "/projects",
     name: "projects",
-    component: () => import("../components/projects.vue"),
+    component: () => import("../views/projects.vue"),
     children: [
       {
         path: ":projectName",

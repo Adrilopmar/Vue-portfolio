@@ -1,6 +1,6 @@
 <template>
-  <section class="mx-9" id="projectTitle">
-    <h1 class="text-6xl mt-9 underline">
+  <section class="p-7" id="projectTitle">
+    <h1 class="text-5xl md:text-6xl underline">
       {{ fullProjectInfo?.name.full_name }}
     </h1>
     <article>
@@ -49,8 +49,8 @@
         app or you have found a bug.
       </p>
       <p class="text-xl mt-5">Thank you! Hope you like it</p>
-      <a :href="fullProjectInfo?.website" target='_blank' class="flex justify-center">
-        <n-button tertiary class="link-btn my-9 w-full lg:w-1/2 p-5 ">
+      <a :href="fullProjectInfo?.website" target='_blank' class="flex justify-center ">
+        <n-button tertiary class="link-btn my-9 w-full lg:w-1/2 p-5 text-lg ">
           Check {{ fullProjectInfo?.name.full_name }} out!
         </n-button>
       </a>
@@ -74,7 +74,7 @@ const getProjectInfo = () => {
   fullProjectInfo.value = infoProjects.find(
     (el) => el.name.url_name == route.params.projectName
   );
-  fullProjectInfo.value?.description
+  fullProjectInfo.value?.description.full_description
     .split("//")
     .forEach((el) => (dataDescription += `<p class="mt-3">${el}</p>`));
   document.querySelector("#projectDescription").innerHTML = dataDescription;
@@ -104,7 +104,7 @@ article {
     height: 100px;
 }
 .logo {
-    filter: drop-shadow(5px 5px 2px rgb(163, 163, 163));
+    filter: drop-shadow(5px 5px 2px rgb(54, 54, 54));
 }
 .link-btn {
   background: var(--primary-btn);

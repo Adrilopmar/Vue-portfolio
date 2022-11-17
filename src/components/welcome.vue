@@ -18,19 +18,19 @@ import { NButton } from "naive-ui";
 </script>
 <style scoped>
 .main-welcome {
-  background-color: rgb(0, 73, 107);
+  background-color:var(--info-bg);
   height: calc(100vh - 65px);
   justify-content: center;
 }
 h1,p{
-  color: var(--secondary-text-color);
+  color: var(--main-text-color);
 }
 .main-logo{
   height: 250px;
   margin: 50px  auto;
 }
 .btn {
-  color: white;
+  color: var(--main-text-color);
 }
 .btn:hover {
   background-color: var(--primary-btn-hover);
