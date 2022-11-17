@@ -4,16 +4,22 @@
 
 
 :root{
-    --main-bg: #ddddddb2;
+    --main-bg: #dddddd;
     --secondary-bg: #f2f2f2;
-    --primary-btn: #c7eeda;
-    --main-text-color:#49708a;
+    --info-bg:rgba(0, 73, 107, 0.8);
+    --primary-btn: #a3f1c9;
+    /* --primary-btn: #c7eeda; */
+    --main-text-color:#f2f2f2;
     --secondary-text-color:#88abc2;
     --button-green-text:#18a058;
     --button-green-text-hover:#117741;
-    --primary-btn-hover: #99c7b0;
+    --primary-btn-hover: #42da8e;
+    /* --primary-btn-hover: #99c7b0; */
 
 }
 body{
     background-color: var(--main-bg) ;
+}
+.n-drawer-body-content-wrapper{
+    padding: 0 !important;
 }
