@@ -19,7 +19,7 @@
     <article id="projectBacklog">
       <h3 class="text-4xl underline">How would we keep working ?</h3>
       <div id="projectPendings" class="project-description mt-9">
-        <div v-for="pending in fullProjectInfo.backlog">
+        <div v-for="pending in fullProjectInfo?.backlog">
           <ul class="mt-5">
             <b class="text-2xl">{{ pending.title }}</b>
             <li class="mt-3 text-xl">{{ pending.description }}</li>
@@ -77,7 +77,7 @@ const getProjectInfo = () => {
   fullProjectInfo.value?.description.full_description
     .split("//")
     .forEach((el) => (dataDescription += `<p class="mt-3">${el}</p>`));
-  document.querySelector("#projectDescription").innerHTML = dataDescription;
+  document.querySelector("#projectDescription")!.innerHTML = dataDescription;
 };
 
 onMounted(() => {
