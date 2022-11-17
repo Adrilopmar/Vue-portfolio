@@ -4,7 +4,10 @@
         "full_name": "Procrastinan't",
         "url_name": "procrastinant"
       },
-      "description": "Procrastinan't is a to-do app where you can post, edit, delete, mark as done and archive your daily tasks. Thanks to the authentication you are the only one who can create, read, edit or delete your to do tasks. // It was a project in order to create a C.R.U.D. application to connect front-end with back-end. // We really enjoyed coding Procrastinan't due to several reasons. The challenges, its flexibility and potential we could build something like others task manager apps, but that was not the idea we have got though it is the direction we will move in order to improve our application.",
+      "description":{
+        "full_description": "Procrastinan't is a to-do app where you can post, edit, delete, mark as done and archive your daily tasks. Thanks to the authentication you are the only one who can create, read, edit or delete your to do tasks. // It was a project in order to create a C.R.U.D. application to connect front-end with back-end. // We really enjoyed coding Procrastinan't due to several reasons. The challenges, its flexibility and potential we could build something like others task manager apps, but that was not the idea we have got though it is the direction we will move in order to improve our application.",
+        "short_description":"To-do Application for your daily tasks. // Create your tasks and check them out anywhere from your mobile, tablet or PC to not procrastinate anymore. Edit or update your tasks, mark them as done, delete or archive them. // Sign up and stop procrastinating. "
+      },
       "backlog":[ 
         {
           "title":"Profile section",
@@ -72,7 +75,10 @@
         "full_name": "Pocket Monsters",
         "url_name": "poke_api"
       },
-      "description": "Pocket Monsters is project made by little challenges. The challenge was to create this little project in 60 min approximately. So every 10 min we imposed ourselves a task you to do. The best part of this challenges was that we had free time if we finished the task before the timer. // It was interesting to split a project into tiny challenges and get 10 min per each and work as a sprints. // This app it is the final result of the challenge. Then we added some extra content because Who would not like to have their own pokédex? The original had neither the modal window nor the pokeball. Yes, we like Pokémon.",
+      "description":{
+        "full_description": "Pocket Monsters is project made by little challenges. The challenge was to create this little project in 60 min approximately. So every 10 min we imposed ourselves a task you to do. The best part of this challenges was that we had free time if we finished the task before the timer. // It was interesting to split a project into tiny challenges and get 10 min per each and work as a sprints. // This app it is the final result of the challenge. Then we added some extra content because Who would not like to have their own pokédex? The original had neither the modal window nor the pokeball. Yes, we like Pokémon.",
+        "short_description":"Six challenges. // Ten minutes per challenge. // Would you be able to do so? // We dived in and got a great project in just 60 minutes"
+      },
       "backlog":[ 
         {
           "title":"Pokémon details",
@@ -124,7 +130,10 @@
       "full_name": "SpotiApp",
       "url_name": "spoti_api"
     },
-    "description": "SpotiAPP was built in purpose of show that we are not working just with Vue, we work with Angular too, work with API and the self imposed challenge was changing themes (who does not want a dark theme ?). // Fetching data and working with API or dark and light themes is really common in front-end world. So we built this web Application to demostrate we can do it. // It is always a good idea to implement diferents palettes to your web in order to let the user decide which mode to use. There are a lot of reasons to introduce dark mode. The mains reasons to set up this feature were to learn how dark/light mode work and reduce eye strain. ",
+    "description":{
+    "full_description":"SpotiAPP was built in purpose of show that we are not working just with Vue, we work with Angular too, work with API and the self imposed challenge was changing themes (who does not want a dark theme?). // Fetching data and working with API or dark and light themes is really common in front-end world. So we built this web Application to demostrate we can do it. // It is always a good idea to implement diferents palettes to your web in order to let the user decide which mode to use. There are a lot of reasons to introduce dark mode. The mains reasons to set up this feature were to learn how dark/light mode work and reduce eye strain. ",
+    "short_description":"Check the new releases in spotify or check if your favourite artist is in the platform."
+    },
     "backlog":[ 
       {
         "title":"Straight to Spotify",
@@ -170,5 +179,60 @@
       "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1668095774/vue%20portfolio/projects/spotify%20API/spoti-api-cover_d6ljwq.png"
     },
     "website":"https://adrilopmar.github.io/Spotifyapp/"
+  },
+  {
+    "name": {
+      "full_name": "More to come",
+      "url_name": "new_projects"
+    },
+    "description":{
+    "full_description":"More projects comming soon",
+    "short_description":"More projects available soon. // We are hard working hard to publish our next project soon // Keep touned in!"
+    },
+    "backlog":[ 
+      {
+        "title":"",
+        "description":""
+      },
+      {
+        "title":"",
+        "description":""
+      },
+      {
+        "title":"",
+        "description":""
+      },
+      {
+        "title":"",
+        "description":""
+      }
+
+    ],
+    "technologies": [
+      {
+        "name":"",
+        "logo":""
+      },
+      {
+        "name":"",
+        "logo":""
+      },
+      {
+        "name":"",
+        "logo":""
+      },
+      {
+        "name":"",
+        "logo":""
+      },
+      {
+        "name":"",
+        "logo":""
+      }
+  ],
+    "images":{
+      "cover":"https://res.cloudinary.com/djqzi4hgo/image/upload/v1661502717/todoApp/profile/elegaant-duck_ic1lya.jpg"
+    },
+    "website":""
   }
 ]
