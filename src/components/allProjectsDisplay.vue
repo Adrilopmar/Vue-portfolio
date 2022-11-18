@@ -43,15 +43,15 @@ const breakingStrings = (data:string)=> {return data.split('//').join('<br/><br/
     min-width: 300px;
 }
 .procrastinant{
-  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830633/vue%20portfolio/projects/procrastinant/cover-procrastinant_j42kmv.png)
-    left/cover no-repeat;
+  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1668782486/vue%20portfolio/projects/procrastinant/portrait-procrastinant_hcvj8z.png)
+    center/cover no-repeat;
 }
 .poke_api{
-  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1667830238/vue%20portfolio/projects/poket%20monsters/cover-poket-monsters_onkz44.png)
+  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1668700325/vue%20portfolio/projects/poket%20monsters/portrait-pocket-monsters_rfv3cx.png)
     center/cover no-repeat;
 }
 .spoti_api{
-  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1668095774/vue%20portfolio/projects/spotify%20API/spoti-api-cover_d6ljwq.png)
+  background: url(https://res.cloudinary.com/djqzi4hgo/image/upload/v1668700377/vue%20portfolio/projects/spotify%20API/portrait-spotiapp_ylu2r1.png)
     left/cover no-repeat;
 }
 .new_projects{
