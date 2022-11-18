@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   base: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',
     build: {
-        outDir: 'dist',
+        outDir: 'docs',
         rollupOptions: {
             output: {
                 entryFileNames: `assets/file_[name].[hash].js`,
@@ -16,6 +16,6 @@ export default defineConfig({
         }
       },
       server: {
-        base: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',
+        base: process.env.NODE_ENV === 'production' ? '/' : '/',
     }
 })
