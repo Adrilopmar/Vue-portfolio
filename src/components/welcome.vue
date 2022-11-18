@@ -4,17 +4,20 @@
     <p class="text-white text-center  text-2xl md:text-5xl md:mt-9">You surf the net, <br> we keep you on the crest</p>
     <img class="main-logo" src="https://res.cloudinary.com/djqzi4hgo/image/upload/v1668359304/vue%20portfolio/logo/alm-logo_tzv32d.png" alt="">
     <div class="container-buttons flex justify-around md:justify-center">
+      <n-space>
       <router-link :to="{name:'about'}">
-        <n-button tertiary class="btn md:mr-12 text-xl ">About us</n-button>
+        <n-button quaternary class="btn md:mr-12 text-xl ">About us</n-button>
+        
       </router-link>
       <router-link :to="{ name: 'projects' }">
-        <n-button tertiary class="btn text-xl"> Our projects </n-button>
+        <n-button quaternary class="btn text-xl"> Our projects </n-button>
       </router-link>
+    </n-space>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { NButton } from "naive-ui";
+import { NButton, NSpace } from "naive-ui";
 </script>
 <style scoped>
 .main-welcome {
@@ -30,10 +33,16 @@ h1,p{
   margin: 50px  auto;
 }
 .btn {
-  color: var(--main-text-color);
+  color: #000;
+  color: var(--button-green-text);
+  background-color:var(--primary-btn);
+  /* background-color:#d7e237; */
+  padding: 15px 30px;
 }
 .btn:hover {
   background-color: var(--primary-btn-hover);
+  color: var(--button-green-text-hover);
+  /* background-color:#e2d737; */
   
 }
 </style>
